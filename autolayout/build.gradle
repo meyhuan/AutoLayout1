@@ -1,0 +1,48 @@
+apply plugin: 'com.android.library'
+// 这个version是区分library版本的，因此当我们需要更新library时记得修改这个version
+android {
+    compileSdkVersion 23
+    buildToolsVersion "23.0.1"
+    resourcePrefix "随便填"
+    defaultConfig {
+        minSdkVersion 10
+        targetSdkVersion 23
+        versionCode 100
+        versionName "1.0.0"
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+}
+//ext {
+//    bintrayRepo = 'maven'
+//    bintrayName = 'autoLayout'
+//
+//    publishedGroupId = 'com.meyu.autolayout'
+//    libraryName = 'autolayout'
+//    artifact = 'autoLayout'
+//
+//    libraryDescription = 'A wrapper for Facebook Native Like Button (LikeView) on Android'
+//
+//    siteUrl = 'https://github.com/meyhuan/autolayout'
+//    gitUrl = 'https://github.com/meyhuan/autolayout.git'
+//
+//    libraryVersion = '0.9.3'
+//
+//    developerId = 'meyu'
+//    developerName = 'meyu'
+//    developerEmail = 'meyuhuan@gmail.com'
+//
+//    licenseName = 'The Apache Software License, Version 2.0'
+//    licenseUrl = 'http://www.apache.org/licenses/LICENSE-2.0.txt'
+//    allLicenses = ["Apache-2.0"]
+//}
+
+
+dependencies {
+    compile fileTree(dir: 'libs', include: ['*.jar'])
+    compile 'com.android.support:appcompat-v7:23.0.1'
+}
